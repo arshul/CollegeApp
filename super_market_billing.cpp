@@ -6,6 +6,7 @@
 #include<stdio.h>
 #include<process.h>
 #include<fstream.h>
+#include<string.h>
 
 //***************************************************************
 //                   CLASS USED IN PROJECT
@@ -14,7 +15,7 @@
 class product
 {
  int pno;
- char name[50];
+ string name;
  float price,qty,tax,dis;
  public:
 	void create_product()
@@ -22,7 +23,7 @@ class product
 	 cout<<"\nPlease Enter The Product No. of The Product ";
 	 cin>>pno;
 	 cout<<"\n\nPlease Enter The Name of The Product ";
-	 gets(name);
+	 cin>>name;
 	 cout<<"\nPlease Enter The Price of The Product ";
 	 cin>>price;
 	 cout<<"\nPlease Enter The Discount (%) ";
@@ -32,8 +33,8 @@ class product
 	void show_product()
 	{
 	 cout<<"\nThe Product No. of The Product : "<<pno;
-	 cout<<"\nThe Name of The Product : ";
-	 puts(name);
+	 cout<<"\nThe Name of The Product : "<<name;
+	 
 	 cout<<"\nThe Price of The Product : "<<price;
 	 cout<<"\nDiscount : "<<dis;
 	 }
